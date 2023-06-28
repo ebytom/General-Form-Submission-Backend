@@ -27,6 +27,30 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/services', serviceRouter);
 
+const multer = require('multer')
+
+const fileStorageEngine = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './public/resources/')
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + "." + (ext = file.originalname.split(".").pop()))
+  }
+})
+
+const upload = multer({ storage: fileStorageEngine });
+// const upload2 = multer({ dest: 'uploads/' });
+
+app.post('/uploadFile', upload.single("file"), (req, res) => {
+  res.send(req.file.filename)
+});
+
+app.get('/downloadFile', function (req, res) {
+  const { fileName } = req.query
+  const file = `${__dirname}/public/resources/${fileName}`;
+  res.download(file); // Set disposition and send it.
+});
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

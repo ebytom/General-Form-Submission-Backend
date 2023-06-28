@@ -213,6 +213,62 @@ const ServiceSchema = new mongoose.Schema({
     no11: {
         type: String,
     },
+
+
+    yes12: {
+        type: String,
+    },
+    no12: {
+        type: String,
+    },
+    yes13: {
+        type: String,
+    },
+    no13: {
+        type: String,
+    },
+    yes14: {
+        type: String,
+    },
+    no14: {
+        type: String,
+    },
+    yes15: {
+        type: String,
+    },
+    no15: {
+        type: String,
+    },
+    yes16: {
+        type: String,
+    },
+    no16: {
+        type: String,
+    },
+    yes17: {
+        type: String,
+    },
+    no17: {
+        type: String,
+    },
+    cost2: {
+        type: String,
+    },
+    cost3: {
+        type: String,
+    },
+    avatar1: {
+        type: String,
+    },
+    avatar2: {
+        type: String,
+    },
+    avatar3: {
+        type: String,
+    },
+
+
+
 });
 
 module.exports = mongoose.model('Service', ServiceSchema);

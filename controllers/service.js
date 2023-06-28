@@ -12,10 +12,11 @@ module.exports.postInformation = async (req, res) => {
             additional, pipe, bore, surface, treated, sources,
             performed, notPerformed, treateds, treatment,
             biological, secondary, advanced, quantity, cost,
-            yes1, no1, yes2, no2, waterusage, yes3, no3, avatar,
+            yes1, no1, yes2, no2, waterusage, yes3, no3,
             treatment_capacity, yes4, no4, yes5, no5, yes6, no6,
             yes7, no7, yes8, no8, yes9, no9, yes10, no10, yes11,
-            no11, } = req.body;
+            no11, yes12, no12, yes13, no13, yes14, no14, yes15,
+            no15, yes16, no16, yes17, no17, cost2, cost3, avatar1, avatar2, avatar3 } = req.body;
         if (!(name)) return res.status(500).json({
             error: "Missing some input field",
             msg: "error"
@@ -72,7 +73,6 @@ module.exports.postInformation = async (req, res) => {
             waterusage: waterusage,
             yes3: yes3,
             no3: no3,
-            avatar: avatar,
             treatment_capacity: treatment_capacity,
             yes4: yes4,
             no4: no4,
@@ -90,6 +90,25 @@ module.exports.postInformation = async (req, res) => {
             no10: no10,
             yes11: yes11,
             no11: no11,
+
+
+            yes12: yes12,
+            no12: no12,
+            yes13: yes13,
+            no13: no13,
+            yes14: yes14,
+            no14: no14,
+            yes15: yes15,
+            no15: no15,
+            yes16: yes16,
+            no16: no16,
+            yes17: yes17,
+            no17: no17,
+            cost2: cost2,
+            cost3: cost3,
+            avatar1: avatar1,
+            avatar2: avatar2,
+            avatar3: avatar3,
         });
 
         information.save()
