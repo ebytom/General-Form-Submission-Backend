@@ -4,7 +4,7 @@ module.exports.postInformation = async (req, res) => {
     try {
         console.log(req.body);
         const { name, orgName, mail, contact, address,
-            country, below25, above25, above5, above10,
+            country, unitInvestment,
             volume, end_product, countries, countries1,
             countries2, memberships, labour, women,
             wateruse, wastewatertreatment, wastewaterdischarge,
@@ -32,10 +32,7 @@ module.exports.postInformation = async (req, res) => {
             contact: contact,
             address: address,
             country: country,
-            below25: below25,
-            above25: above25,
-            above5: above5,
-            above10: above10,
+            unitInvestment: unitInvestment,
             volume: volume,
             end_product: end_product,
             countries: countries,

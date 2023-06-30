@@ -24,16 +24,7 @@ const ServiceSchema = new mongoose.Schema({
     country: {
         type: String,
     },
-    below25: {
-        type: String,
-    },
-    above25: {
-        type: String,
-    },
-    above5: {
-        type: String,
-    },
-    above10: {
+    unitInvestment: {
         type: String,
     },
     volume: {
