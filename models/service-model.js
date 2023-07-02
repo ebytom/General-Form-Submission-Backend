@@ -51,195 +51,29 @@ const ServiceSchema = new mongoose.Schema({
     women: {
         type: String,
     },
-    wateruse: {
-        type: String,
-    },
-    wastewatertreatment: {
-        type: String,
-    },
-    wastewaterdischarge: {
-        type: String,
-    },
-    chemicaluse: {
-        type: String,
-    },
-    airemissions: {
-        type: String,
-    },
-    solidwaste: {
-        type: String,
-    },
-    otherpermits: {
-        type: String,
+    permit: {
+        type: Array,
     },
     additional: {
         type: String,
     },
-    pipe: {
-        type: String,
+    sourcing: {
+        type: Array,
     },
-    bore: {
-        type: String,
-    },
-    surface: {
-        type: String,
-    },
-    treated: {
-        type: String,
-    },
-    sources: {
-        type: String,
-    },
-    performed: {
-        type: String,
-    },
-    notPerformed: {
-        type: String,
-    },
-    treateds: {
-        type: String,
-    },
-    treatment: {
-        type: String,
-    },
-    biological: {
-        type: String,
-    },
-    secondary: {
-        type: String,
-    },
-    advanced: {
-        type: String,
-    },
+
     quantity: {
         type: String,
     },
     cost: {
         type: String,
     },
-    yes1: {
-        type: String,
-    },
-    no1: {
-        type: String,
-    },
-    yes2: {
-        type: String,
-    },
-    no2: {
-        type: String,
-    },
     waterusage: {
-        type: String,
-    },
-
-    yes3: {
-        type: String,
-    },
-    no3: {
         type: String,
     },
     avatar: {
         type: String,
     },
     treatment_capacity: {
-        type: String,
-    },
-    yes4: {
-        type: String,
-    },
-    no4: {
-        type: String,
-    },
-    yes5: {
-        type: String,
-    },
-    no5: {
-        type: String,
-    },
-    yes6: {
-        type: String,
-    },
-    no6: {
-        type: String,
-    },
-
-    no6: {
-        type: String,
-    },
-
-    yes7: {
-        type: String,
-    },
-
-    no7: {
-        type: String,
-    },
-
-    yes8: {
-        type: String,
-    },
-
-    no8: {
-        type: String,
-    },
-
-    yes9: {
-        type: String,
-    },
-
-    no9: {
-        type: String,
-    },
-
-    yes10: {
-        type: String,
-    },
-    no10: {
-        type: String,
-    },
-    yes11: {
-        type: String,
-    },
-    no11: {
-        type: String,
-    },
-
-
-    yes12: {
-        type: String,
-    },
-    no12: {
-        type: String,
-    },
-    yes13: {
-        type: String,
-    },
-    no13: {
-        type: String,
-    },
-    yes14: {
-        type: String,
-    },
-    no14: {
-        type: String,
-    },
-    yes15: {
-        type: String,
-    },
-    no15: {
-        type: String,
-    },
-    yes16: {
-        type: String,
-    },
-    no16: {
-        type: String,
-    },
-    yes17: {
-        type: String,
-    },
-    no17: {
         type: String,
     },
     cost2: {
@@ -258,6 +92,66 @@ const ServiceSchema = new mongoose.Schema({
         type: String,
     },
 
+    treatment: {
+        type: String,
+    },
+    general: {
+        type: String,
+    },
+    knowhow: {
+        type: String,
+    },
+    large: {
+        type: String,
+    },
+    legal: {
+        type: String,
+    },
+    performanceValue: {
+        type: String,
+    },
+    consumption: {
+        type: String,
+    },
+    balance: {
+        type: String,
+    },
+    usage: {
+        type: String,
+    },
+    consumption2: {
+        type: String,
+    },
+    balance2: {
+        type: String,
+    },
+    usage2: {
+        type: String,
+    },
+    consumption3: {
+        type: String,
+    },
+    balance3: {
+        type: String,
+    },
+    usage3: {
+        type: String,
+    },
+    waste: {
+        type: String,
+    },
+    liquid: {
+        type: String,
+    },
+    domestic: {
+        type: String,
+    },
+    records: {
+        type: String,
+    },
+    temp: {
+        type: String,
+    },
 
 
 });

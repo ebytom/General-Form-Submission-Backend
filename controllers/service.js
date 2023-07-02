@@ -7,16 +7,14 @@ module.exports.postInformation = async (req, res) => {
             country, unitInvestment,
             volume, end_product, countries, countries1,
             countries2, memberships, labour, women,
-            wateruse, wastewatertreatment, wastewaterdischarge,
-            chemicaluse, airemissions, solidwaste, otherpermits,
-            additional, pipe, bore, surface, treated, sources,
-            performed, notPerformed, treateds, treatment,
-            biological, secondary, advanced, quantity, cost,
-            yes1, no1, yes2, no2, waterusage, yes3, no3,
-            treatment_capacity, yes4, no4, yes5, no5, yes6, no6,
-            yes7, no7, yes8, no8, yes9, no9, yes10, no10, yes11,
-            no11, yes12, no12, yes13, no13, yes14, no14, yes15,
-            no15, yes16, no16, yes17, no17, cost2, cost3, avatar1, avatar2, avatar3 } = req.body;
+            wateruse, permit, additional, sourcing,
+            quantity, cost, waterusage, treatment_capacity,
+            cost2, cost3, avatar1, avatar2, avatar3,
+
+            general, knowhow, large, legal, performanceValue, treatment, consumption,
+            balance, usage, consumption2, balance2, usage2, consumption3, balance3,
+            usage3, waste, liquid, domestic, records, temp
+        } = req.body;
         if (!(name)) return res.status(500).json({
             error: "Missing some input field",
             msg: "error"
@@ -41,71 +39,40 @@ module.exports.postInformation = async (req, res) => {
             memberships: memberships,
             labour: labour,
             women: women,
-            wateruse: wateruse,
-            wastewatertreatment: wastewatertreatment,
-            wastewaterdischarge: wastewaterdischarge,
-            chemicaluse: chemicaluse,
-            airemissions: airemissions,
-            solidwaste: solidwaste,
-            otherpermits: otherpermits,
+            permit: permit,
             additional: additional,
-            pipe: pipe,
-            bore: bore,
-            surface: surface,
-            treated: treated,
-            sources: sources,
-            performed: performed,
-            notPerformed: notPerformed,
-            treateds: treateds,
-            treatment: treatment,
-            biological: biological,
-            secondary: secondary,
-            advanced: advanced,
+            sourcing: sourcing,
             quantity: quantity,
             cost: cost,
-            yes1: yes1,
-            no1: no1,
-            yes2: yes2,
-            no2: no2,
             waterusage: waterusage,
-            yes3: yes3,
-            no3: no3,
             treatment_capacity: treatment_capacity,
-            yes4: yes4,
-            no4: no4,
-            yes5: yes5,
-            no5: no5,
-            yes6: yes6,
-            no6: no6,
-            yes7: yes7,
-            no7: no7,
-            yes8: yes8,
-            no8: no8,
-            yes9: yes9,
-            no9: no9,
-            yes10: yes10,
-            no10: no10,
-            yes11: yes11,
-            no11: no11,
-
-
-            yes12: yes12,
-            no12: no12,
-            yes13: yes13,
-            no13: no13,
-            yes14: yes14,
-            no14: no14,
-            yes15: yes15,
-            no15: no15,
-            yes16: yes16,
-            no16: no16,
-            yes17: yes17,
-            no17: no17,
             cost2: cost2,
             cost3: cost3,
             avatar1: avatar1,
             avatar2: avatar2,
             avatar3: avatar3,
+
+            treatment: treatment,
+            general: general,
+            knowhow: knowhow,
+            large: large,
+            legal: legal,
+            performanceValue: performanceValue,
+            consumption: consumption,
+            balance: balance,
+            usage: usage,
+            consumption2: consumption2,
+            balance2: balance2,
+            usage2: usage2,
+            consumption3: consumption3,
+            balance3: balance3,
+            usage3: usage3,
+            waste: waste,
+            liquid: liquid,
+            domestic: domestic,
+            records: records,
+            temp: temp
+
         });
 
         information.save()
@@ -124,6 +91,26 @@ module.exports.postInformation = async (req, res) => {
     }
     catch (error) {
         console.log(error);
+        return res.status(500).json({
+            error: error,
+            msg: "error"
+        });
+    }
+}
+
+
+module.exports.getInformations = async (req, res) => {
+    try {
+        var requests = await serviceModel.find({})
+        if (req.body.searchVal) {
+            requirements = requirements.filter(requirement => requirement.applicationName.startsWith(req.body.searchVal))
+        }
+
+        return res.status(200).json({
+            requests: requests
+        })
+    }
+    catch (error) {
         return res.status(500).json({
             error: error,
             msg: "error"
