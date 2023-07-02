@@ -7,9 +7,10 @@ module.exports.postInformation = async (req, res) => {
             country, unitInvestment,
             volume, end_product, countries, countries1,
             countries2, memberships, labour, women,
-            wateruse, permit, additional, sourcing,
+            permit, additional, sourcing,
             quantity, cost, waterusage, treatment_capacity,
-            cost2, cost3, avatar1, avatar2, avatar3,
+            cost2, cost3, avatar1, avatar2, avatar3, treatmentFacility,
+            practiceMethods, legalEnforcement, qualityStandards, untreatedWater,
 
             general, knowhow, large, legal, performanceValue, treatment, consumption,
             balance, usage, consumption2, balance2, usage2, consumption3, balance3,
@@ -71,8 +72,13 @@ module.exports.postInformation = async (req, res) => {
             liquid: liquid,
             domestic: domestic,
             records: records,
-            temp: temp
+            temp: temp,
 
+            treatmentFacility: treatmentFacility,
+            practiceMethods: practiceMethods,
+            legalEnforcement: legalEnforcement,
+            qualityStandards: qualityStandards,
+            untreatedWater: untreatedWater,
         });
 
         information.save()
@@ -108,6 +114,26 @@ module.exports.getInformations = async (req, res) => {
 
         return res.status(200).json({
             requests: requests
+        })
+    }
+    catch (error) {
+        return res.status(500).json({
+            error: error,
+            msg: "error"
+        });
+    }
+}
+
+
+module.exports.getInformationById = async (req, res) => {
+    try {
+        const information = await serviceModel.find({
+            informationId: req.body.informationId
+        })
+
+        console.log(information);
+        return res.status(200).json({
+            information: information[0]
         })
     }
     catch (error) {

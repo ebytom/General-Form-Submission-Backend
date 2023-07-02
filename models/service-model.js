@@ -152,8 +152,21 @@ const ServiceSchema = new mongoose.Schema({
     temp: {
         type: String,
     },
-
-
+    treatmentFacility: {
+        type: Array,
+    },
+    practiceMethods: {
+        type: Array,
+    },
+    legalEnforcement: {
+        type: Array,
+    },
+    qualityStandards: {
+        type: Array,
+    },
+    untreatedWater: {
+        type: Array,
+    },
 });
 
 module.exports = mongoose.model('Service', ServiceSchema);
