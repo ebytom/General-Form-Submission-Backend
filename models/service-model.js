@@ -33,13 +33,13 @@ const ServiceSchema = new mongoose.Schema({
     end_product: {
         type: String,
     },
-    countries: {
+    countryInput: {
         type: String,
     },
-    countries1: {
+    countryInput1: {
         type: String,
     },
-    countries2: {
+    countryInput2: {
         type: String,
     },
     memberships: {
@@ -167,6 +167,74 @@ const ServiceSchema = new mongoose.Schema({
     untreatedWater: {
         type: Array,
     },
+    loss: {
+        type: String,
+    },
+
+
+
+    industrial: {
+        type: String,
+    },
+    industrial1: {
+        type: String,
+    },
+    domestic1: {
+        type: String,
+    },
+    domestic2: {
+        type: String,
+    },
+    clusterlevel: {
+        type: String,
+    },
+    stakeholders: {
+        type: String,
+    },
+    achievement: {
+        type: String,
+    },
+    financeaccess: {
+        type: String,
+    },
+    comments: {
+        type: String,
+    },
+    industrial_sludge: {
+        type: String,
+    },
+    water_recovery: {
+        type: String,
+    },
+    others_display: {
+        type: String,
+    },
+
+    total_discharge: {
+        type: String,
+    },
+    firstnamedomestic: {
+        type: String,
+    },
+    firstnamedomestic1: {
+        type: String,
+    },
+    firstnamedomestic2: {
+        type: String,
+    },
+    firstnameprocess: {
+        type: String,
+    },
+    firstnameprocess1: {
+        type: String,
+    },
+    firstnameprocess2: {
+        type: String,
+    },
+    waters: {
+        type: String,
+    }
+
 });
 
 module.exports = mongoose.model('Service', ServiceSchema);

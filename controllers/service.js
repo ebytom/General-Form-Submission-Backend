@@ -5,8 +5,8 @@ module.exports.postInformation = async (req, res) => {
         console.log(req.body);
         const { name, orgName, mail, contact, address,
             country, unitInvestment,
-            volume, end_product, countries, countries1,
-            countries2, memberships, labour, women,
+            volume, end_product, countryInput, countryInput1,
+            countryInput2, memberships, labour, women,
             permit, additional, sourcing,
             quantity, cost, waterusage, treatment_capacity,
             cost2, cost3, avatar1, avatar2, avatar3, treatmentFacility,
@@ -14,7 +14,13 @@ module.exports.postInformation = async (req, res) => {
 
             general, knowhow, large, legal, performanceValue, treatment, consumption,
             balance, usage, consumption2, balance2, usage2, consumption3, balance3,
-            usage3, waste, liquid, domestic, records, temp
+            usage3, waste, liquid, domestic, records, temp,
+
+            industrial1, industrial, domestic1, domestic2, clusterlevel, stakeholders,
+            achievement, comments, financeaccess, water_recovery, industrial_sludge, others_display, loss,
+
+            total_discharge, firstnamedomestic, firstnamedomestic1, firstnamedomestic2, firstnameprocess,
+            firstnameprocess1, firstnameprocess2, waters
         } = req.body;
         if (!(name)) return res.status(500).json({
             error: "Missing some input field",
@@ -34,9 +40,9 @@ module.exports.postInformation = async (req, res) => {
             unitInvestment: unitInvestment,
             volume: volume,
             end_product: end_product,
-            countries: countries,
-            countries1: countries1,
-            countries2: countries2,
+            countryInput: countryInput,
+            countryInput1: countryInput1,
+            countryInput2: countryInput2,
             memberships: memberships,
             labour: labour,
             women: women,
@@ -73,12 +79,35 @@ module.exports.postInformation = async (req, res) => {
             domestic: domestic,
             records: records,
             temp: temp,
+            loss: loss,
 
             treatmentFacility: treatmentFacility,
             practiceMethods: practiceMethods,
             legalEnforcement: legalEnforcement,
             qualityStandards: qualityStandards,
             untreatedWater: untreatedWater,
+
+            industrial: industrial,
+            industrial1: industrial1,
+            domestic1: domestic1,
+            domestic2: domestic2,
+            clusterlevel: clusterlevel,
+            stakeholders: stakeholders,
+            achievement: achievement,
+            financeaccess: financeaccess,
+            comments: comments,
+            industrial_sludge: industrial_sludge,
+            water_recovery: water_recovery,
+            others_display: others_display,
+
+            total_discharge: total_discharge,
+            firstnamedomestic: firstnamedomestic,
+            firstnamedomestic1: firstnamedomestic1,
+            firstnamedomestic2: firstnamedomestic2,
+            firstnameprocess: firstnameprocess,
+            firstnameprocess1: firstnameprocess1,
+            firstnameprocess2: firstnameprocess2,
+            waters: waters
         });
 
         information.save()
