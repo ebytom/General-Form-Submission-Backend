@@ -1,4 +1,4 @@
-var createError = require('http-errors');
+// var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -54,10 +54,6 @@ app.get('/downloadFile', function (req, res) {
   res.download(file); // Set disposition and send it.
 });
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
 
 // error handler
 app.use(function (err, req, res, next) {
