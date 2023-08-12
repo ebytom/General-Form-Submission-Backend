@@ -4,12 +4,12 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('./app');
 var debug = require('debug')('form-backend:server');
 var http = require('http');
 require('dotenv').config()
 
-const { connectDB } = require('../config/database');
+const { connectDB } = require('./config/database');
 
 /**
  * Get port from environment and store in Express.

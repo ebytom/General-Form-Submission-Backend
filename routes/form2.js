@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post("/postForm", postForm);
 router.post("/getForm", getForm);
-router.post("/getFormId", getFormById);
+router.post("/getFormById", getFormById);
 
 
 module.exports = router;

@@ -37,11 +37,9 @@ module.exports.getForm = async (req, res) => {
 
 module.exports.getFormById = async (req, res) => {
     try {
-        const form = await serviceModel.find({
-            form2Id: req.body.informationId
+        const form = await form2Model.find({
+            form2Id: req.body.form2Id
         })
-
-        console.log(information);
         return res.status(200).json({
             form: form[0]
         })
