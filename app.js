@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var serviceRouter = require('./routes/service');
+var form2Router = require('./routes/form2');
 
 var app = express();
 
@@ -26,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/services', serviceRouter);
+
+app.use('/form2', form2Router);
 
 const multer = require('multer')
 
