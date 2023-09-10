@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const Form2Schema = new mongoose.Schema({
     form2Id: {
         type: Number,
-        default: new Date().getTime(),
     },
     facility_pic_ent: {
+        type: String,
+    },
+    facility_pic: {
         type: String,
     },
     facility_name: {
@@ -44,13 +46,16 @@ const Form2Schema = new mongoose.Schema({
     cert_planned: {
         type: String,
     },
-    award_received: {
+    award_recieved: {
         type: String,
     },
     elec_energy_src: {
         type: Array,
     },
     baseline_data_period: {
+        type: String,
+    },
+    total_elec_consumption: {
         type: String,
     },
     annual_elec_consumption: {
@@ -128,6 +133,9 @@ const Form2Schema = new mongoose.Schema({
     garden_use: {
         type: String,
     },
+    garden_and_domestic_water_use_ob: {
+        type: String,
+    },
     src_fuel: {
         type: Array,
     },
@@ -147,6 +155,9 @@ const Form2Schema = new mongoose.Schema({
         type: String,
     },
     assess_ob_at_genset: {
+        type: String,
+    },
+    assess_ob_at_other: {
         type: String,
     },
     pic_ob_at_boiler: {
@@ -194,46 +205,46 @@ const Form2Schema = new mongoose.Schema({
     elec_motors: {
         type: Array,
     },
-    Energy_Saving_Opportunities_in_Electrical_Motors: {
+    energy_saving_opportunities_in_electrical_motors: {
         type: String,
     },
-    Estimated_Savings_Motor_Upgradation: {
+    estimated_savings_motor_upgradation: {
         type: String,
     },
-    Waste_Heat_Recovery_Observations: {
+    waste_heat_recovery_observations: {
         type: String,
     },
     scope_waste: {
         type: Array,
     },
-    Waste_Heat_Recovery_Fuel_Savings: {
+    waste_heat_recovery_fuel_savings: {
         type: String,
     },
     pic_ob_raw_material: {
         type: String,
     },
-    Assessment_Observation_at_Raw_Material_Inward: {
+    assessment_observation_at_raw_material_inward: {
         type: String,
     },
     pic_ob_material_handling: {
         type: String,
     },
-    Assessment_Observation_at_Material_Handling: {
+    assessment_observation_at_material_handling: {
         type: String,
     },
-    Production_Machine_Utilization_Data_Collection_Aspects: {
+    production_machine_utilization_data_collection_aspects: {
         type: String,
     },
     pic_production_machine_util: {
         type: String,
     },
-    annual_production_quantity: {
+    production_layout_observations: {
         type: String,
     },
     production_layout_ob_photo: {
         type: String,
     },
-    Installation_Monitoring_Systems: {
+    installation_monitoring_systems: {
         type: String,
     },
     mgmt_on_energy_resource: {
@@ -266,7 +277,7 @@ const Form2Schema = new mongoose.Schema({
     rw_harvesting_observation: {
         type: String,
     },
-    water_saving_opportunities: {
+    water_saving_opportunties: {
         type: String,
     },
     obs_on_safety: {

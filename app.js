@@ -49,9 +49,14 @@ app.post('/uploadFile', upload.single("file"), (req, res) => {
 });
 
 app.get('/downloadFile', function (req, res) {
-  const { fileName } = req.query
-  const file = `${__dirname}/public/resources/${fileName}`;
-  res.download(file); // Set disposition and send it.
+  // const { fileName } = req.query
+  // console.log(req.query);
+  // const file = `${__dirname}/public/resources/${fileName}`;
+  // res.download(file); // Set disposition and send it.
+  console.log(req.query.fileId);
+  const path = `${__dirname}/${req.query.fileId}`;
+  console.log(path);
+  res.download(path)
 });
 
 

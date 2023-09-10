@@ -2,6 +2,9 @@ const form2Model = require('../models/form2-model');
 const serviceModel = require('../models/service-model')
 
 module.exports.postForm = async (req, res) => {
+
+    console.log(req.body)
+
     const form2 = await form2Model.create(req.body);
 
     if (!form2) {
