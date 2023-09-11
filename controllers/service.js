@@ -4,7 +4,7 @@ module.exports.postInformation = async (req, res) => {
     try {
         console.log(req.body);
         const { name, orgName, mail, contact, address,
-            country, unitInvestment,
+            country, unitInvestment, unitType,
             volume, end_product, countryInput, countryInput1,
             countryInput2, memberships, labour, women,
             permit, additional, sourcing,
@@ -36,6 +36,7 @@ module.exports.postInformation = async (req, res) => {
             mail: mail,
             contact: contact,
             address: address,
+            unitType: unitType,
             country: country,
             unitInvestment: unitInvestment,
             volume: volume,

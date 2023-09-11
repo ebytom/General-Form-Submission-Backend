@@ -21,6 +21,9 @@ const ServiceSchema = new mongoose.Schema({
     address: {
         type: String,
     },
+    unitType: {
+        type: String,
+    },
     country: {
         type: String,
     },
