@@ -8,13 +8,13 @@ module.exports.postInformation = async (req, res) => {
             volume, end_product, countryInput, countryInput1,
             countryInput2, memberships, labour, women,
             permit, additional, sourcing,
-            quantity, cost, waterusage, treatment_capacity,
+            quantity, cost, waterusage, waterusage2, waterusage3, treatment_capacity,
             cost2, cost3, avatar1, avatar2, avatar3, treatmentFacility,
             practiceMethods, legalEnforcement, qualityStandards, untreatedWater,
 
             general, knowhow, large, legal, performanceValue, treatment, consumption,
             balance, usage, consumption2, balance2, usage2, consumption3, balance3,
-            usage3, waste, liquid, domestic, records, temp,
+            usage3, waste, liquid, domestic, records, temp, method,
 
             industrial1, industrial, domestic1, domestic2, clusterlevel, stakeholders,
             achievement, comments, financeaccess, water_recovery, industrial_sludge, others_display, loss,
@@ -53,6 +53,8 @@ module.exports.postInformation = async (req, res) => {
             quantity: quantity,
             cost: cost,
             waterusage: waterusage,
+            waterusage2: waterusage2,
+            waterusage3: waterusage3,
             treatment_capacity: treatment_capacity,
             cost2: cost2,
             cost3: cost3,
@@ -87,6 +89,7 @@ module.exports.postInformation = async (req, res) => {
             legalEnforcement: legalEnforcement,
             qualityStandards: qualityStandards,
             untreatedWater: untreatedWater,
+            method: method,
 
             industrial: industrial,
             industrial1: industrial1,

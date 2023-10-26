@@ -73,6 +73,12 @@ const ServiceSchema = new mongoose.Schema({
     waterusage: {
         type: String,
     },
+    waterusage2: {
+        type: String,
+    },
+    waterusage3: {
+        type: String,
+    },
     avatar: {
         type: String,
     },
@@ -111,6 +117,9 @@ const ServiceSchema = new mongoose.Schema({
         type: String,
     },
     performanceValue: {
+        type: String,
+    },
+    method: {
         type: String,
     },
     consumption: {
