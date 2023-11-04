@@ -337,6 +337,9 @@ const Form2Schema = new mongoose.Schema({
     specific_water_cost: {
         type: String,
     },
+    specific_water_cost1: {
+        type: String,
+    },
 
 });
 
