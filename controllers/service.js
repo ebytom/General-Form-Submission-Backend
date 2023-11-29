@@ -176,3 +176,20 @@ module.exports.getInformationById = async (req, res) => {
         });
     }
 }
+
+
+module.exports.deleteEntry = async (req, res) => {
+    try {
+        const { formId } = req.params;
+        // Find and delete document based on formId
+        const deletedForm = await serviceModel.findOneAndDelete({ formId });
+        if (deletedForm) {
+            res.status(200).json({ message: 'Document deleted successfully', deletedForm });
+        } else {
+            res.status(404).json({ message: 'Document not found' });
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+}
