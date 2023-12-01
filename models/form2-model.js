@@ -341,6 +341,26 @@ const Form2Schema = new mongoose.Schema({
         type: String,
     },
 
+    energy_savings: {
+        type: String
+    },
+    fuel_savings: {
+        type: String
+    },
+    water_savings: {
+        type: String
+    },
+    rwh: {
+        type: String
+    },
+    material_savings: {
+        type: String
+    },
+    ct_opportunities: {
+        type: String
+    },
+
+
 });
 
 module.exports = mongoose.model('Form2', Form2Schema);
