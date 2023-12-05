@@ -361,6 +361,51 @@ const Form2Schema = new mongoose.Schema({
     },
 
 
+
+    savings1: {
+        type: String
+    },
+    savings2: {
+        type: String
+    },
+    savings3: {
+        type: String
+    },
+    savings4: {
+        type: String
+    },
+    savings5: {
+        type: String
+    },
+    investments: {
+        type: String
+    },
+    investments1: {
+        type: String
+    },
+    investments2: {
+        type: String
+    },
+    investments3: {
+        type: String
+    },
+    investments4: {
+        type: String
+    },
+    investments5: {
+        type: String
+    },
+    investments6: {
+        type: String
+    },
+    investments7: {
+        type: String
+    },
+    investments8: {
+        type: String
+    }
+
+
 });
 
 module.exports = mongoose.model('Form2', Form2Schema);
