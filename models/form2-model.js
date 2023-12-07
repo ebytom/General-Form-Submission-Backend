@@ -16,6 +16,9 @@ const Form2Schema = new mongoose.Schema({
     facility_location: {
         type: String,
     },
+    facility_address: {
+        type: String,
+    },
     dateInput: {
         type: Object,
     },
