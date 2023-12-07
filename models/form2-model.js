@@ -271,6 +271,9 @@ const Form2Schema = new mongoose.Schema({
     annual_rainfall: {
         type: String,
     },
+    total_roof_area: {
+        type: String
+    },
     rwh_scope: {
         type: Array,
     },
