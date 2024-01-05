@@ -60,7 +60,6 @@ module.exports.getFormById = async (req, res) => {
 module.exports.deleteEntry = async (req, res) => {
     try {
         const { formId } = req.body;
-        console.log(formId);
         // Find and delete document based on formId
         const deletedForm = await form2Model.findOneAndDelete({ form2Id: formId });
         if (deletedForm) {
