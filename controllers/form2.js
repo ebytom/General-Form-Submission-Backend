@@ -63,7 +63,7 @@ module.exports.deleteEntry = async (req, res) => {
         // Find and delete document based on formId
         const deletedForm = await form2Model.findOneAndDelete({ form2Id: formId });
         if (deletedForm) {
-            res.status(200).json({ message: 'Document deleted successfully', deletedForm });
+            res.status(200).json({ message: 'Document deleted successfully!', deletedForm });
         } else {
             res.status(404).json({ message: 'Document not found' });
         }
